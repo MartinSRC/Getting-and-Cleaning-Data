@@ -20,7 +20,7 @@ Creates a second, independent tidy data set with the average of each variable fo
 Good luck!
 
 ***
-# What I did
+# Process
 - Downloaded the "Human Activity Recognition Using Smartphones Data Set"
 - Merged training and test sets of Samsung Galaxy S smartphone accelerometer data
 - Extracted descriptives and chose names

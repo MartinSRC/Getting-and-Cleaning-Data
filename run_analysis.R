@@ -70,9 +70,10 @@ setkey(dt, subject, activity, DomainF, AccelerationF, InstrumentF,
 dtTidy <- dt[, list(count = .N, average = mean(value)), by=key(dt)]
 write.table(dtTidy, "Tidy.txt", quote=F, sep="\t", row.names=F)
 
-# make CodeBook.html
+# generate CodeBook
 library(knitr)
-foo <- file('CodeBook.md')
+library(markdown)
+foo <- file('CodeBook.Rmd')
 writeLines("
 Codebook
 ========
@@ -114,5 +115,4 @@ dtTidy
 ```  
 ",foo)
 close(foo)
-knit2html('CodeBook.md')
-browseURL('CodeBook.html')
+knit2html('CodeBook.Rmd')
